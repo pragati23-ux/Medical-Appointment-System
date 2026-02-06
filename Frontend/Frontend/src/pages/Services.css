@@ -1,0 +1,91 @@
+/* Services Page Styles */
+
+.services_section {
+  min-height: 100vh;
+  padding: 60px 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 112, 219, 0.05) 100%);
+}
+
+.services_section section {
+  width: 100%;
+}
+
+.services_section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Big grid container for service cards */
+.services_section .big {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Responsive grid adjustments */
+@media only screen and (max-width: 768px) {
+  .services_section .big {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .services_section .big {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .services_section .big {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page heading styles (optional) */
+.services_heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services_heading h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.services_heading p {
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 768px) {
+  .services_heading h1 {
+    font-size: 32px;
+  }
+
+  .services_heading p {
+    font-size: 14px;
+  }
+}

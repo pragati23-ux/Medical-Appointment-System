@@ -1,0 +1,105 @@
+/* Doctor Card Styling */
+
+.doctor_card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.doctor_card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.doctor_card_img_container {
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.doctor_card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.doctor_card:hover .doctor_card_img {
+  transform: scale(1.05);
+}
+
+/* Content padding */
+.doctor_card > h2,
+.doctor_card > div {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.doctor_card > h2:first-of-type {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.doctor_card > div:last-child {
+  padding-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .doctor_card {
+    margin-bottom: 20px;
+  }
+  
+  .doctor_card_img_container {
+    aspect-ratio: 16 / 9;
+  }
+
+  .doctor_card > h2,
+  .doctor_card > div {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .doctor_card > h2:first-of-type {
+    padding-top: 16px;
+  }
+
+  .doctor_card > div:last-child {
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .doctor_card {
+    margin-bottom: 32px;
+  }
+  
+  .doctor_card_img_container {
+    aspect-ratio: 16 / 9;
+  }
+
+  .doctor_card > h2,
+  .doctor_card > div {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .doctor_card > h2:first-of-type {
+    padding-top: 28px;
+  }
+
+  .doctor_card > div:last-child {
+    padding-bottom: 28px;
+  }
+}
+
+

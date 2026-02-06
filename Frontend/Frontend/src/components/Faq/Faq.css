@@ -1,0 +1,84 @@
+.faq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Horizontal gap from a left-side image; adjust as needed */
+  margin-left: 24px;
+}
+
+@media (min-width: 1024px) {
+  .faq-list {
+    margin-left: 48px;
+  }
+}
+
+.faq-item {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 12px 0;
+}
+
+/* Boxed question styles */
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb; /* neutral border */
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.03);
+}
+
+.faq-question-text {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.faq-question:hover .faq-question-text {
+  color: #111827;
+}
+
+.faq-icon {
+  transition: transform 0.25s ease;
+  font-size: 18px;
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+}
+
+.faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Answer sits below the boxed question */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, opacity 0.28s ease;
+  opacity: 0;
+  margin-top: 8px;
+}
+
+.faq-answer.open {
+  max-height: 500px; /* big enough for content */
+  opacity: 1;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+  padding-left: 8px; /* small indent under the box */
+}
+
+/* Helper class for when you want to force a larger gap from the image */
+.faq-list.image-gap-large {
+  margin-left: 64px;
+}
+

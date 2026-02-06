@@ -1,0 +1,194 @@
+/* Styles specific to the Home page */
+.hero_wrapper {
+  /* Move the background to the wrapper so it can span hero + counter
+     Make it cover the full viewport */
+  background-image: linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)), url('../assets/images/hero-bg(1).png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh; /* cover full screen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.hero_section {
+  /* Removed duplicate background to prevent flickering - background is on hero_wrapper */
+  min-height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Primary request button used in the hero */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin:2rem; /* similar to px-4 py-2 */
+  font-weight: 600;
+  height: 44px; /* consistent height */
+  border-radius: 9999px; /* pill */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(59,130,246,0.12);
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(59,130,246,0.18);
+  background-color: #2563eb; /* blue-600 */
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .btn { padding: 0.625rem 1.25rem; font-size: 16px; }
+}
+
+/* Hero image styling */
+.log {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Counter section styling */
+.leo {
+  background-image: linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)), url('../assets/images/hero-bg(1).png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+/* Image sizing to prevent layout shift */
+.hero_section img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+ .container1{
+   
+   font-size: 2rem;
+ }
+.heading{
+  font-size: 30px;
+ }
+ .feature-heading{
+  font-size: 32px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+ }
+ .geo{
+  margin-left: 0;
+  padding: 0;
+  color: #374151;
+  line-height: 1.8;
+ }
+
+/* Feature row: center text vertically and style image */
+.feature-row { gap: 28px; }
+.feature-text { text-align: center; max-width: 700px; display:flex; flex-direction:column; justify-content:center; margin: 0 auto; }
+.feature-heading { font-weight: 700; }
+.feature-subheading { font-weight: 700; margin-top: 6px; margin-bottom: 12px; }
+.feature-copy { max-width: 680px; margin: 0 auto; }
+.feature-img { flex-basis: 48%; max-width: 520px; }
+.feature-img img { display: block; width: 100%; height: auto; border-radius: 12px; max-height: 540px; object-fit: cover; }
+
+@media (min-width: 1024px) {
+  .feature-row { align-items: center; justify-content: space-between; }
+  .feature-text { text-align: center; max-width: 520px; flex-basis: 50%; }
+  .feature-img { flex-basis: 45%; }
+
+  /* About block: center heading and copy */
+  .about-heading { font-size: 28px; }
+  .about-copy { margin-left: 0; }
+}
+
+/* About section styling */
+.about-section { padding: 48px 24px; }
+.about-section .about-heading { text-align: center; }
+.about-section .about-copy { text-align: center; color: #374151; line-height: 1.9; }
+.about-section img { border-radius: 12px; }
+
+@media (min-width: 1024px) {
+  .about-section .about-heading { text-align: center; }
+  .about-section .about-copy { max-width: 640px; }
+  .about-section img { max-width: 380px; }
+}
+ .het{
+  /* font-weight: bolder;
+  font-size: 30px;
+  margin-left:260px;
+  align-items: center; */
+  font-size: 39px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.jet{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+}
+  
+   
+/* Services section styling */
+.services-section { padding: 40px 0; }
+.services-header h2 { font-size: 32px; margin-bottom: 8px; margin-left: 200px; }
+.services-subtext { color: #6b7280; margin-top: 12px; text-align: center; margin-right: 150px; }
+/* decorative divider lives in the markup (w-[80px] utility) */
+.btn-outline { background: transparent; color: #3b82f6; border: 1px solid #3b82f6; padding: 0.45rem 0.9rem; border-radius: 9999px; }
+.btn-outline:hover { background: #3b82f6; color: #fff; }
+
+/* Center services grid and constrain width for a balanced desktop layout */
+.services-list-wrapper { max-width: 1100px; margin: 0 auto; }
+
+/* Center grid items inside the wrapper and increase gap for breathing room */
+.services-list-wrapper .grid {
+  justify-items: center;
+  margin-left: 150px;
+  gap: 28px;
+}
+
+/* Cap card width and keep them consistent */
+.services-list-wrapper .grid > * { max-width: 340px; }
+
+@media (min-width: 768px) {
+  /* grid stays centered; spacing handled by utilities */
+}
+
+
+ 
